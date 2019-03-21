@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts-svg/dist/icons.eot?8e18bf20964122fb33fa89733b4bac3a?#iefix") format("embedded-opentype"),
+url("../fonts-svg/dist/icons.woff2?8e18bf20964122fb33fa89733b4bac3a") format("woff2"),
+url("../fonts-svg/dist/icons.woff?8e18bf20964122fb33fa89733b4bac3a") format("woff"),
+url("../fonts-svg/dist/icons.ttf?8e18bf20964122fb33fa89733b4bac3a") format("truetype");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-file-alt:before {
+    content: "\f101";
+}

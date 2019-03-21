@@ -1,0 +1,257 @@
+
+@import "./bootstrap/index";
+
+@font-face {
+	font-family: 'Lato Light';
+	src: local('Lato Light'), local('Lato-Light'), url(/local/assets/css/fonts/Lato-Light.woff2) format('woff2'), url(/local/assets/css/fonts/Lato-Light.woff) format('woff'), url(/local/assets/css/fonts/Lato-Light.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Lato Bold';
+	src: local('Lato Bold'), local('Lato-Bold'), url(/local/assets/css/fonts/Lato-Bold.woff2) format('woff2'), url(/local/assets/css/fonts/Lato-Bold.woff) format('woff'), url(/local/assets/css/fonts/Lato-Bold.ttf) format('truetype');
+	font-weight: 700;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Lato Hairline';
+	src: local('Lato Hairline'), local('Lato-Hairline'), url(/local/assets/css/fonts/Lato-Hairline.woff2) format('woff2'), url(/local/assets/css/fonts/Lato-Hairline.woff) format('woff'), url(/local/assets/css/fonts/Lato-Hairline.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Lato Regular';
+	src: local('Lato Regular'),
+	local('Lato-Regular'),
+	url(/local/assets/css/fonts/Lato-Regular.woff2) format('woff2'),
+	url(/local/assets/css/fonts/Lato-Regular.woff) format('woff'),
+	url(/local/assets/css/fonts/Lato-Regular.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Lato Black';
+	src: local('Lato Black'), local('Lato-Black'), url(/local/assets/css/fonts/Lato-Black.woff2) format('woff2'), url(/local/assets/css/fonts/Lato-Black.woff) format('woff'), url(/local/assets/css/fonts/Lato-Black.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Lato Medium';
+	src: local('Lato Medium'), local('Lato-Medium'), url(/local/assets/css/fonts/Lato-Medium.woff2) format('woff2'), url(/local/assets/css/fonts/Lato-Medium.woff) format('woff'), url(/local/assets/css/fonts/Lato-Medium.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Roboto Slab Bold';
+	src: local('Roboto Slab Bold'), local('Roboto-Slab-Bold'), url(/local/assets/css/fonts/robotoslabbold.woff2) format('woff2'), url(/local/assets/css/fonts/robotoslabbold.woff) format('woff'), url(/local/assets/css/fonts/robotoslabbold.ttf) format('truetype');
+	font-weight: 700;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Lato Semibold';
+	src: local('Lato Semibold'), local('Lato-Semibold'), url(/local/assets/css/fonts/Lato-Semibold.woff2) format('woff2'), url(/local/assets/css/fonts/Lato-Semibold.woff) format('woff'), url(/local/assets/css/fonts/Lato-Semibold.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+* {
+	box-sizing: border-box;
+	//margin: 0;
+	//padding: 0;
+	&:after, &:before {
+		box-sizing: border-box;
+	}
+}
+
+html {
+	font-size: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333333;
+	background-color: #e5eaef;
+	margin: 0;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+a {
+	color: #014986;
+	text-decoration: none;
+}
+.bg-primary{
+	a{
+		color: white;
+	}
+}
+
+img {
+	vertical-align: middle;
+}
+
+input{
+	&[type='date']{
+		text-align: center;
+	}
+}
+
+.btn{
+	&{
+		&-link{
+			&.active{
+				background: #e5eaef;
+			}
+		}
+
+		// модификаторы
+		&_checkin-type{
+			position: relative;
+			width: 100%;
+			margin-top: 1.5rem;
+
+			span{
+				width: 27px;
+				height: 27px;
+				position: absolute;
+				top: -10px;
+				right: -10px;
+				border-radius: 20px;
+				box-sizing: border-box;
+				border: 2px solid $primary;
+				background: $white;
+				color: $primary;
+				font: 600 14px/24px 'Lato Bold';
+			}
+		}
+	}
+}
+a{
+	&.link{
+		&_icon{
+			display: flex;
+			align-items: center;
+
+			i{
+				padding-right: 1rem;
+			}
+		}
+	}
+}
+
+// components
+.navbar{
+	&-brand{
+
+		//padding: 15px 15px;
+		//font-size: 18px;
+		//line-height: 20px;
+		//height: 50px;
+	}
+	//a{
+	//	color: $white;
+	//}
+	&-nav{
+		//align-items: center;
+		.nav-item{
+			a{
+				padding: 1rem 1.5rem;
+				font-size: 1.4rem;
+			}
+		}
+	}
+	.container{
+		.navbar-collapse{
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+	}
+	&-collapse{
+		overflow-x: visible;
+		border-top: 1px solid #013663;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+		padding: 1rem 0;
+	}
+	.dropdown{
+		&.show{
+			background-color: #005aa5;
+		}
+		&-menu{
+			position: absolute;
+			width: 100%;
+		}
+		&-menu,&-item{
+			color: $white;
+			background-color: $primary;
+		}
+	}
+}
+
+// модификаторы
+
+// для мобильных
+@include media-breakpoint-down(sm){
+	._padding{
+		&-top{
+			&-1{
+				padding-top: 1rem;
+			}
+		}
+		&-0{
+			padding: 0;
+		}
+	}
+}
+
+._padding{
+	&-top{
+
+	}
+	&-0{
+		padding: 0 !important;
+	}
+}
+
+.list-item_icon{
+	&:before{
+		font-family: icons !important;
+		font-style: normal;
+		font-weight: normal !important;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		position: absolute;
+		display: block;
+	}
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+	font-family: icons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	display: block;
+}
